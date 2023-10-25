@@ -13,6 +13,15 @@ const Hero = () => {
           Github
         </button>
       </nav>
+      <h1 className="head_text">
+        Summarize Articles With <br className="max-md:hidden" />
+        <span className="orange_gradient">OpenAI GPT-4</span>
+      </h1>
+      <h2 className="desc">
+        Streamline Your Reading with Sumz: Your Open-Source Article Summarizer.
+        Sumz efficiently condenses lengthy articles into easily digestible,
+        crystal-clear summaries.
+      </h2>
     </header>
   );
 };
