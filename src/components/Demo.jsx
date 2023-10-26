@@ -4,26 +4,44 @@ import { copy, linkIcon, loader, tick } from "../assets";
 import { useLazyGetSummaryQuery } from "../services/article";
 
 const Demo = () => {
+  // one/ current article usestate
   const [article, setArticle] = useState({
     url: "",
     summary: "",
   });
 
+  const [allArticles, setAllArticles] = useState([]);
+
   const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+
+  // storign searches in local storage
+  useEffect(() => {
+    const articlesFromLocalStorage = JSON.parse(
+      localStorage.getItem("articles")
+    );
+
+    if (articlesFromLocalStorage) {
+      setAllArticles(articlesFromLocalStorage);
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { data } = await getSummary({
-      articleUrl: article.url
+      articleUrl: article.url,
     });
 
-    if(data?.summary) {
+    if (data?.summary) {
       const newArticle = { ...article, summary: data.summary };
+      // pushing new article into our all article array
+      const updatedAllArticles = [newArticle, ...allArticles];
 
       setArticle(newArticle);
+      setAllArticles(updatedAllArticles);
 
-      console.log(newArticle);
+      // have to strignify for local storage
+      localStorage.setItem("article", JSON.stringify(updatedAllArticles));
     }
   };
 
@@ -58,6 +76,7 @@ const Demo = () => {
           </button>
         </form>
         {/*Display Url History */}
+        
       </div>
 
       {/* Display Results */}
