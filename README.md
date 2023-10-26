@@ -56,8 +56,7 @@ The application will start and open in your default web browser.
 
 Summario is a React-based web application that leverages RAPID API for text summarization.
 
-![image](https://github.com/JoshuaVaneps/GPT-Summarizer/assets/111782130/f9ac3597-3129-46ea-a2a6-78fe9741e9aa)
-
+![Summario](https://github.com/JoshuaVaneps/GPT-Summarizer/assets/111782130/724cd855-e3f8-47ac-af38-79a1d03d62cd)
 
 ## License
 
