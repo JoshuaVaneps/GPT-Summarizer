@@ -31,7 +31,10 @@ const Demo = () => {
             <p>↵</p>
           </button>
         </form>
+        {/*Display Url History */}
       </div>
+
+      {/* Display Results */}
     </section>
   );
 };

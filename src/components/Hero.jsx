@@ -1,10 +1,10 @@
-import { logo } from "../assets";
+import { logo, summario } from "../assets";
 
 const Hero = () => {
   return (
     <header className="w-full flex justify-center items-center flex-col">
       <nav className="flex justify-between items-center w-full mb-10 pt-3">
-        <img src={logo} alt="Sumz_Logo" className="w-28 object-contain" />
+        <img src={summario} alt="Summario_Logo" className="w-64 object-contain" />
         <button
           type="button"
           onClick={() => window.open("https://github.com/JoshuaVaneps")}
@@ -15,11 +15,11 @@ const Hero = () => {
       </nav>
       <h1 className="head_text">
         Summarize Articles With <br className="max-md:hidden" />
-        <span className="orange_gradient">OpenAI GPT-4</span>
+        <span className="pink_gradient">OpenAI GPT-4</span>
       </h1>
       <h2 className="desc">
-        Streamline Your Reading with Sumz: Your Open-Source Article Summarizer.
-        Sumz efficiently condenses lengthy articles into easily digestible,
+        Streamline Your Studying with Summario: Your Open-Source Article Summarizer.
+        Summario efficiently condenses lengthy articles into easily digestible,
         crystal-clear summaries.
       </h2>
     </header>
