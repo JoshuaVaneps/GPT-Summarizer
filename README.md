@@ -2,6 +2,9 @@
 
 Welcome to Summario, an article summarizer that simplifies the way you consume content. Summario leverages the power of OpenAI through RAPID API to generate concise and informative summaries from lengthy articles, helping you save time and get to the heart of the content quickly.
 
+## Deployment Demo
+Demo the amazing site [here](incandescent-bonbon-7a8f55.netlify.app)
+
 ## Getting Started
 
 Follow these simple steps to get Summario up and running on your system.
